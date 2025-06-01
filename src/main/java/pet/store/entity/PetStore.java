@@ -2,6 +2,10 @@ package pet.store.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -22,7 +26,8 @@ public class PetStore {
 	@JoinTable(
 			name = "pet_Store_customer",
 			joinColumns = @JoinColumn(name = "pet_Store_id"),
-			inverseJoinColumns = @JoinColumn(name = "customer_id")
-	)
-	private Set<Customer> customers;
+			inverseJoinColumns = @JoinColumn(name = "customer_id"))
+	@EqualsAndHashCode.Exclude
+	@ToString.Exclude
+	private Set<Customer> customers = new HashSet<>();
 }

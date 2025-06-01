@@ -17,5 +17,25 @@ public class PetStoreEmployee {
 		this.employeeName = employee.getEmployeename();
 		this.employeeEmail = employee.getEmployeeEmail();
 	}
+	private String firstName;
+	private String lastName;
+	private String jobTitle;
+	private String phone;
+	
+	public String getFirstName() {
+		return firstName;
+	}
+	
+	public String getLastName() {
+		return lastName;
+	}
+	
+	public String getJobTilte() {
+		return jobTitle;
+	}
+	
+	public String getPhone() {
+		return phone;
+	}
 
 }
